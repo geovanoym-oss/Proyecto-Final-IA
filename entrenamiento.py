@@ -83,7 +83,7 @@ if __name__ == "__main__":
     optimizer = optim.Adam(model.parameters(), lr=0.0002)
     criterion = nn.CrossEntropyLoss()
 
-    print(f"🚀 Iniciando entrenamiento con {len(dataset)} imágenes...")
+    print(f"Iniciando entrenamiento con {len(dataset)} imágenes...")
     
     # ciclo de aprendizaje (70 epocas para asegurar precision) 
     for epoch in range(70):
@@ -95,4 +95,4 @@ if __name__ == "__main__":
     
     # guardamos el resultado final para que main.py y app.py puedan usarlo
     torch.save({'state_dict': model.state_dict(), 'clases': dataset.clases}, MODEL_SAVE_PATH)
-    print("✅ ¡Modelo entrenado y guardado con éxito en la carpeta /modelo!")
+    print("¡Modelo entrenado y guardado con éxito en la carpeta /modelo!")
